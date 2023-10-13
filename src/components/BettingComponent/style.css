@@ -1,0 +1,14 @@
+.head-area .head-content {
+  height: 50vh !important;
+}
+
+@media (max-width: 900px) {
+  .team .team-img:before {
+    height: 140px;
+    top: -20px;
+  }
+}
+
+.betting {
+  box-shadow: 0px 0px 23px white;
+}

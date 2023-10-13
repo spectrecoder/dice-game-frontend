@@ -1,0 +1,102 @@
+//	================================================================================================
+//	File Name: template-3d-graphics-variables.scss
+//	Description: Custom theme specific variables for 3d graphics template
+//	----------------------------------------------------------------------------------------------
+//	Version: 1.0
+//	Author: PIXINVENT
+//	Author URL: http://www.themeforest.net/user/pixinvent
+//	================================================================================================
+
+//  ================================================================================================
+//  WARNING: PLEASE DO NOT CHANGE THIS VARIABLE FILE. THIS FILE WILL GET OVERWRITTEN WITH EACH THEME UPDATE.
+//  TIP:
+//  We suggest you to use this (assets/scss/variables/theme-variables.scss) file for overriding the variables.
+//  ================================================================================================
+
+
+// Navbar 
+$navbar-radius: 0.25rem;
+
+// Dark Bg Font Colors
+$dark-bg-color1: #c7b8ff;
+
+// Grey color variants
+$grey-accent1: #161616;
+$grey-accent2: #7d7d7d;
+$grey-accent3: #3f3f3f;
+
+// Main header color
+$header-gradient1:    #140e38;
+$header-gradient2:    #194089;
+
+// Button color
+$button-gradient1:    #bf68e6;
+$button-gradient2:    #9e48cd;
+
+// If any section has background color or gradient
+$section-gradient1:    $header-gradient1;
+$section-gradient2:    $header-gradient2;
+$section-bg: #fbfaff;
+
+// Token box background color
+$token-gradient1:    #ff4137;
+$token-gradient2:    #fdc800;
+$token-button-gradient1:    #29beff;
+$token-button-gradient2:    #1c76fe;
+$token-button-radius: 0.25rem;
+$token-sale-icon-color: $white;
+
+// Footer section background
+$footer-gradient1:    $header-gradient1;
+$footer-gradient2:    $header-gradient2;
+
+// Progressbar gradient
+$progress-gradient1:    #29beff;
+$progress-gradient2:    #1c76fe;
+// Whitepaper Icon color 
+$whitepaper-icon: $header-gradient2;
+
+// Team border color
+$team-gradient1:    $progress-gradient1;
+$team-gradient2:    $progress-gradient2;
+
+// Active Team border color
+$team-active-gradient1:    #ff4137;
+$team-active-gradient2:    #fdc800;
+
+// FAQ icon background color
+$faq-icon-gradient1:    $header-gradient1;
+$faq-icon-gradient2:    $header-gradient2;
+
+// FAQ text color
+$faq-text-color: $dark-bg-color1;
+$faq-active-text-color: $white;
+
+$faq-tab-active-color:  #7240a5;
+
+// Roadmap Timestamp Color
+$roadmap-timestamp-color: $grey-accent2;
+
+// Roadmap prev/next button color
+$roadmap-button-gradient1:    $button-gradient1;
+$roadmap-button-gradient2:    $button-gradient2;
+
+// Roadmap circle & border color
+$roadmap-circle-gradient1:    $progress-gradient1;
+$roadmap-circle-gradient2:    $progress-gradient2;
+$roadmap:    #24a8f2;
+
+// Roadmap active box color
+$roadmap-active-box-gradient1:    $progress-gradient1;
+$roadmap-active-box-gradient2:    $progress-gradient2;
+
+// Roadmap active button color
+$roadmap-active-button-gradient1:    $button-gradient1;
+$roadmap-active-button-gradient2:    $button-gradient2;
+
+// Roadmap active circle color
+$roadmap-active-circle-gradient1:    $button-gradient1;
+$roadmap-active-circle-gradient2:    $button-gradient2;
+
+// Contact icons color
+$contact-icon-color: $faq-tab-active-color;

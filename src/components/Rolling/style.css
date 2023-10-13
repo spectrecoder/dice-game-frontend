@@ -1,0 +1,272 @@
+.dice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2rem;
+  perspective: 600px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 90px;
+}
+
+.die-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 8rem;
+  list-style-type: none;
+  transform-style: preserve-3d;
+  width: 8rem;
+  padding-left: 0px;
+}
+.even-roll {
+  transition: transform 1.5s ease-out;
+}
+.odd-roll {
+  transition: transform 1.25s ease-out;
+}
+.die-item {
+  background-color: #6b1515;
+  box-shadow: inset -0.35rem 0.35rem 0.75rem rgba(0, 0, 0, 0.3),
+    inset 0.5rem -0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-areas:
+    'one two three'
+    'four five six'
+    'seven eight nine';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100%;
+  padding: 1rem;
+  width: 100%;
+}
+
+.die-item {
+  box-shadow: inset -0.35rem 0.35rem 0.75rem rgba(0, 0, 0, 0.3),
+    inset 0.5rem -0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-areas:
+    'one two three'
+    'four five six'
+    'seven eight nine';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100%;
+  padding: 1rem;
+  width: 100%;
+}
+
+.odd-roll .die-item {
+  background-color: #77eb1f;
+}
+
+.even-roll .die-item {
+  background-color: #5eceff;
+}
+
+.dot {
+  align-self: center;
+  background-color: #676767;
+  border-radius: 50%;
+  box-shadow: inset -0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+  display: block;
+  height: 1.25rem;
+  justify-self: center;
+  width: 1.25rem;
+}
+/* .die-item[data-side='6'] {
+  background-image: url('https://images.pexels.com/photos/2326802/pexels-photo-2326802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.die-item[data-side='5'] {
+  background-image: url('https://images.pexels.com/photos/33235/statue-of-liberty-landmark-close-new-york.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.die-item[data-side='4'] {
+  background-image: url('https://images.pexels.com/photos/2260783/pexels-photo-2260783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.die-item[data-side='3'] {
+  background-image: url('https://images.pexels.com/photos/2438240/pexels-photo-2438240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.die-item[data-side='2'] {
+  background-image: url('https://images.pexels.com/photos/2326912/pexels-photo-2326912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.die-item[data-side='1'] {
+  background-image: url('https://images.pexels.com/photos/37646/new-york-skyline-new-york-city-city-37646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+} */
+.even-roll[data-roll='1'] {
+  transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+}
+.even-roll[data-roll='2'] {
+  transform: rotateX(450deg) rotateY(720deg) rotateZ(360deg);
+}
+.even-roll[data-roll='3'] {
+  transform: rotateX(360deg) rotateY(630deg) rotateZ(360deg);
+}
+.even-roll[data-roll='4'] {
+  transform: rotateX(360deg) rotateY(810deg) rotateZ(360deg);
+}
+.even-roll[data-roll='5'] {
+  transform: rotateX(270deg) rotateY(720deg) rotateZ(360deg);
+}
+.even-roll[data-roll='6'] {
+  transform: rotateX(360deg) rotateY(900deg) rotateZ(360deg);
+}
+.odd-roll[data-roll='1'] {
+  transform: rotateX(-360deg) rotateY(-720deg) rotateZ(-360deg);
+}
+.odd-roll[data-roll='2'] {
+  transform: rotateX(-270deg) rotateY(-720deg) rotateZ(-360deg);
+}
+.odd-roll[data-roll='3'] {
+  transform: rotateX(-360deg) rotateY(-810deg) rotateZ(-360deg);
+}
+.odd-roll[data-roll='4'] {
+  transform: rotateX(-360deg) rotateY(-630deg) rotateZ(-360deg);
+}
+.odd-roll[data-roll='5'] {
+  transform: rotateX(-450deg) rotateY(-720deg) rotateZ(-360deg);
+}
+.odd-roll[data-roll='6'] {
+  transform: rotateX(-360deg) rotateY(-900deg) rotateZ(-360deg);
+}
+[data-side='1'] {
+  transform: rotate3d(0, 0, 0, 90deg) translateZ(4rem);
+}
+[data-side='2'] {
+  transform: rotate3d(-1, 0, 0, 90deg) translateZ(4rem);
+}
+[data-side='3'] {
+  transform: rotate3d(0, 1, 0, 90deg) translateZ(4rem);
+}
+[data-side='4'] {
+  transform: rotate3d(0, -1, 0, 90deg) translateZ(4rem);
+}
+[data-side='5'] {
+  transform: rotate3d(1, 0, 0, 90deg) translateZ(4rem);
+}
+[data-side='6'] {
+  transform: rotate3d(1, 0, 0, 180deg) translateZ(4rem);
+}
+[data-side='1'] .dot:nth-of-type(1) {
+  grid-area: five;
+}
+[data-side='2'] .dot:nth-of-type(1) {
+  grid-area: one;
+}
+[data-side='2'] .dot:nth-of-type(2) {
+  grid-area: nine;
+}
+[data-side='3'] .dot:nth-of-type(1) {
+  grid-area: one;
+}
+[data-side='3'] .dot:nth-of-type(2) {
+  grid-area: five;
+}
+[data-side='3'] .dot:nth-of-type(3) {
+  grid-area: nine;
+}
+[data-side='4'] .dot:nth-of-type(1) {
+  grid-area: one;
+}
+[data-side='4'] .dot:nth-of-type(2) {
+  grid-area: three;
+}
+[data-side='4'] .dot:nth-of-type(3) {
+  grid-area: seven;
+}
+[data-side='4'] .dot:nth-of-type(4) {
+  grid-area: nine;
+}
+[data-side='5'] .dot:nth-of-type(1) {
+  grid-area: one;
+}
+[data-side='5'] .dot:nth-of-type(2) {
+  grid-area: three;
+}
+[data-side='5'] .dot:nth-of-type(3) {
+  grid-area: five;
+}
+[data-side='5'] .dot:nth-of-type(4) {
+  grid-area: seven;
+}
+[data-side='5'] .dot:nth-of-type(5) {
+  grid-area: nine;
+}
+[data-side='6'] .dot:nth-of-type(1) {
+  grid-area: one;
+}
+[data-side='6'] .dot:nth-of-type(2) {
+  grid-area: three;
+}
+[data-side='6'] .dot:nth-of-type(3) {
+  grid-area: four;
+}
+[data-side='6'] .dot:nth-of-type(4) {
+  grid-area: six;
+}
+[data-side='6'] .dot:nth-of-type(5) {
+  grid-area: seven;
+}
+[data-side='6'] .dot:nth-of-type(6) {
+  grid-area: nine;
+}
+
+@media (max-width: 700px) {
+  .dice {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .die-list {
+    height: 6rem;
+    width: 6rem;
+  }
+  [data-side='1'] {
+    transform: rotate3d(0, 0, 0, 90deg) translateZ(3rem);
+  }
+  [data-side='2'] {
+    transform: rotate3d(-1, 0, 0, 90deg) translateZ(3rem);
+  }
+  [data-side='3'] {
+    transform: rotate3d(0, 1, 0, 90deg) translateZ(3rem);
+  }
+  [data-side='4'] {
+    transform: rotate3d(0, -1, 0, 90deg) translateZ(3rem);
+  }
+  [data-side='5'] {
+    transform: rotate3d(1, 0, 0, 90deg) translateZ(3rem);
+  }
+  [data-side='6'] {
+    transform: rotate3d(1, 0, 0, 180deg) translateZ(3rem);
+  }
+  .dot {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .dice {
+    perspective: 1300px;
+  }
+}
+
+.roll-text {
+  font-size: 26px;
+  letter-spacing: 0.11em;
+  line-height: 35px;
+  padding: 17px 0;
+  z-index: 20;
+}
+
+.roll-text > div {
+  width: 80px;
+}
+
+.wheelMask {
+  z-index: 50;
+  top: -100px;
+}

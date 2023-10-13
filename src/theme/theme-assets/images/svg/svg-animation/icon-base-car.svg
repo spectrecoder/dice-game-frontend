@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="87.637px" height="57.051px" viewBox="0 0 87.637 57.051" enable-background="new 0 0 87.637 57.051" xml:space="preserve">
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#8EB1DD" d="M43.819,3.701c24.2,0,43.818,11.942,43.818,26.675
+		c0,14.731-19.618,26.675-43.818,26.675S0,45.107,0,30.376C0,15.644,19.619,3.701,43.819,3.701z"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#E3EBF7" d="M43.819,0c24.2,0,43.818,11.942,43.818,26.675
+		c0,14.731-19.618,26.675-43.818,26.675S0,41.406,0,26.675C0,11.942,19.619,0,43.819,0z"/>
+	<radialGradient id="SVGID_1_" cx="43.8188" cy="26.6748" r="36.2739" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#67BDEA;stop-opacity:0.6"/>
+		<stop  offset="1" style="stop-color:#67BDEA;stop-opacity:0"/>
+	</radialGradient>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_1_)" d="M43.819,0c24.2,0,43.818,11.942,43.818,26.675
+		c0,14.731-19.618,26.674-43.818,26.674S0,41.406,0,26.675C0,11.943,19.619,0,43.819,0z"/>
+</g>
+</svg>

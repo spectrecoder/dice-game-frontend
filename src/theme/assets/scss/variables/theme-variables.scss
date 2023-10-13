@@ -1,0 +1,48 @@
+//	================================================================================================
+//	File Name: template-variables.scss
+//	Description: Users custom theme variables file.
+//	----------------------------------------------------------------------------------------------
+//	Version: 1.0
+//	Author: PIXINVENT
+//	Author URL: http://www.themeforest.net/user/pixinvent
+//	================================================================================================
+
+//  ================================================================================================
+//  Use this file to override theme variables.
+//  You can use any variable from app-assets/scss/theme-variables.scss
+//  This SCSS file if for customers customization and not required to overwrite with theme update.
+//  If you overwrite you will lost your variables/changes.
+//  ================================================================================================
+
+$white : #fff; // white color
+$black:  #000; // black color
+
+// Buttons
+$btn-gradient-blue-1: #28bcfd;
+$btn-gradient-blue-2: #1d78ff;
+$btn-gradient-blue-glow: #1f87ff;
+
+$btn-gradient-orange-1: #fdc800;
+$btn-gradient-orange-2: #ff4137;
+$btn-gradient-orange-glow: #ff5f2b;
+
+$btn-gradient-purple-1: #bf68e6;
+$btn-gradient-purple-2: #9e48cd;
+$btn-gradient-purple-glow: #9e48cd;
+
+// Other
+$orange: #fe801d;
+$separator: #eeecf4;
+
+// Font sizes
+$font-xlarge: 2.75rem;
+$font-large: 2rem;
+$font-medium: 1.125rem;
+$base-font: 1rem;
+$font-small: 0.875rem;
+$font-xsmall: 0.75rem;
+
+// line height
+$line-height-1: 0.5rem;
+$line-height-2: 1rem;
+$line-height-3: 1.5rem;

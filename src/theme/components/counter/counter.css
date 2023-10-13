@@ -1,0 +1,452 @@
+.counter-area .counter-content h1{
+    color: #FFFFFF;
+}
+
+.counter-area .counter-content h3{
+    color: #FFFFFF;
+}
+
+.counter-area .counter-content .banner-content h1{
+    font-size: 2.25rem;
+}
+
+.counter-area .counter-content .progress-top{
+    position: absolute;
+    top: 0.8rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    color: #FFFFFF;
+    padding: 0 1rem;
+}
+
+.counter-area .counter-content .banner-content h3 {
+    padding-top: 2rem !important;
+}
+
+.counter-area .counter-content .banner-content .my-3{
+    margin-bottom: 1rem!important;
+}
+
+.counter-area .counter-content .banner-content .loading-bar .py-5{
+    padding-bottom: 3rem!important;
+    padding-top: 3rem!important;
+}
+
+.counter-area .counter-content .progress-top .li{
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+
+
+.counter-area .counter-content .progress-top .li.pre-sale{
+    position: relative;
+    left: 1rem;
+}
+
+.counter-area .counter-content .progress-top .li.bonus{
+    position: relative;
+    left: 1rem;
+}
+
+
+.counter-area .counter-content .progress-bars{
+    position: absolute;
+    top: 1.9rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    color: #FFFFFF;
+    padding: 0 1rem;
+}
+
+.counter-area .counter-content .progress-bars .li {
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+
+.counter-area .counter-content .progress {
+    background: #FFFFFF;
+    border: 4px solid #FFFFFF;
+    border-radius: 1rem;
+    height: 1.875rem;
+    overflow: initial;
+}
+
+.counter-area .counter-content .progress-bar-custom {
+    background: #FFFFFF;
+    border-radius: 1rem;
+    height: 1.36rem;
+    background: -webkit-gradient(linear, left top, right top, from(#9E48CD), to(#d284f5));
+    background: -webkit-linear-gradient(left, #9E48CD, #d284f5);
+    background: -moz-linear-gradient(left, #9E48CD, #d284f5);
+    background: -o-linear-gradient(left, #9E48CD, #d284f5);
+    background: linear-gradient(to right, #9E48CD, #14387b);
+    -webkit-box-shadow: 2px 0 7px 0 rgb(0 0 0 / 35%);
+    box-shadow: 2px 0 7px 0 rgb(0 0 0 / 35%);
+}
+
+.counter-area .counter-content .progress-bottom {
+    position: absolute;
+    bottom: 0.8rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #FFFFFF;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.counter-area .counter-content .progress-bottom .progress-info{
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+
+.counter-area .logo-wrapper {
+    overflow: hidden;
+    width: 25.35rem;
+    height: 25.35rem;
+    background-color: #FFFFFF;
+    border-radius: 20rem;
+}
+
+.counter-area .counter-content .crypto-logo{
+    z-index: 1;
+    /*position: relative;*/
+    /*width: 22.87rem;*/
+    /*height: 22.87rem;*/
+    background: -webkit-radial-gradient(circle, #194089, #194089);
+    background: -moz-radial-gradient(circle, #194089, #194089);
+    background: -o-radial-gradient(circle, #194089, #194089);
+    background: radial-gradient(circle, #194089, #194089);
+    top: 1.25rem;
+    left: -1.75rem;
+    border-radius: 20rem;
+    -webkit-box-shadow: -2px 3px 26px 0 #9E48CD;
+    box-shadow: -2px 3px 26px 0 #9E48CD;
+}
+
+.counter-area #ripple, .counter-area #ripple2, .counter-area #ripple3 {
+    border-radius : 9999px;
+    border : 1px solid rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow : 0 0 20px rgba(255, 255, 255, 0.4);
+            box-shadow : 0 0 20px rgba(255, 255, 255, 0.4);
+    position : absolute;
+    bottom : 50%;
+    margin-bottom : -326px;
+    right : 50%;
+    margin-right : -326px;
+    -webkit-animation : shrink 5s linear infinite;
+       -moz-animation : shrink 5s linear infinite;
+         -o-animation : shrink 5s linear infinite;
+            animation : shrink 5s linear infinite;
+    z-index : 0;
+    background : rgba(255, 255, 255, 0.4);
+  }
+  .counter-area #ripple {
+    -webkit-animation-delay : 1s;
+       -moz-animation-delay : 1s;
+         -o-animation-delay : 1s;
+            animation-delay : 1s;
+  }
+  .counter-area #ripple2 {
+    -webkit-animation-delay : 1.5s;
+       -moz-animation-delay : 1.5s;
+         -o-animation-delay : 1.5s;
+            animation-delay : 1.5s;
+  }
+  .counter-area #ripple3 {
+    -webkit-animation-delay : 2s;
+       -moz-animation-delay : 2s;
+         -o-animation-delay : 2s;
+            animation-delay : 2s;
+  }
+
+  @-webkit-keyframes shrink {
+    0% {
+      margin-bottom : 0;
+      margin-right : 0;
+      width : 0;
+      height : 0;
+      opacity : 0;
+    }
+    10% {
+      opacity : 0.5;
+    }
+    30% {
+      opacity : 0.3;
+    }
+    60% {
+      opacity : 0;
+    }
+    100% {
+      margin-bottom : -326px;
+      margin-right : -326px;
+      width : 650px;
+      height : 650px;
+      opacity : 0;
+    }
+  }
+
+  @-moz-keyframes shrink {
+    0% {
+      margin-bottom : 0;
+      margin-right : 0;
+      width : 0;
+      height : 0;
+      opacity : 0;
+    }
+    10% {
+      opacity : 0.5;
+    }
+    30% {
+      opacity : 0.3;
+    }
+    60% {
+      opacity : 0;
+    }
+    100% {
+      margin-bottom : -326px;
+      margin-right : -326px;
+      width : 650px;
+      height : 650px;
+      opacity : 0;
+    }
+  }
+
+  @-o-keyframes shrink {
+    0% {
+      margin-bottom : 0;
+      margin-right : 0;
+      width : 0;
+      height : 0;
+      opacity : 0;
+    }
+    10% {
+      opacity : 0.5;
+    }
+    30% {
+      opacity : 0.3;
+    }
+    60% {
+      opacity : 0;
+    }
+    100% {
+      margin-bottom : -326px;
+      margin-right : -326px;
+      width : 650px;
+      height : 650px;
+      opacity : 0;
+    }
+  }
+
+  @keyframes shrink {
+    0% {
+      margin-bottom : 0;
+      margin-right : 0;
+      width : 0;
+      height : 0;
+      opacity : 0;
+    }
+    10% {
+      opacity : 0.5;
+    }
+    30% {
+      opacity : 0.3;
+    }
+    60% {
+      opacity : 0;
+    }
+    100% {
+      margin-bottom : -326px;
+      margin-right : -326px;
+      width : 650px;
+      height : 650px;
+      opacity : 0;
+    }
+  }
+  .counter-area .pulse2 {
+    -webkit-animation : pulse2 5s linear infinite;
+       -moz-animation : pulse2 5s linear infinite;
+         -o-animation : pulse2 5s linear infinite;
+            animation : pulse2 5s linear infinite;
+  }
+
+  @-webkit-keyframes pulse2 {
+    0% {
+      -webkit-transform : scale(0.8);
+              transform : scale(0.8);
+    }
+    20% {
+      -webkit-transform : scale(0.8);
+              transform : scale(0.8);
+    }
+    60% {
+      -webkit-transform : scale(1);
+              transform : scale(1);
+    }
+    80% {
+      -webkit-transform : scale(1);
+              transform : scale(1);
+    }
+    100% {
+      -webkit-transform : scale(0.8);
+              transform : scale(0.8);
+    }
+  }
+
+  @-moz-keyframes pulse2 {
+    0% {
+      -moz-transform : scale(0.8);
+           transform : scale(0.8);
+    }
+    20% {
+      -moz-transform : scale(0.8);
+           transform : scale(0.8);
+    }
+    60% {
+      -moz-transform : scale(1);
+           transform : scale(1);
+    }
+    80% {
+      -moz-transform : scale(1);
+           transform : scale(1);
+    }
+    100% {
+      -moz-transform : scale(0.8);
+           transform : scale(0.8);
+    }
+  }
+
+  @-o-keyframes pulse2 {
+    0% {
+      -o-transform : scale(0.8);
+         transform : scale(0.8);
+    }
+    20% {
+      -o-transform : scale(0.8);
+         transform : scale(0.8);
+    }
+    60% {
+      -o-transform : scale(1);
+         transform : scale(1);
+    }
+    80% {
+      -o-transform : scale(1);
+         transform : scale(1);
+    }
+    100% {
+      -o-transform : scale(0.8);
+         transform : scale(0.8);
+    }
+  }
+
+  @keyframes pulse2 {
+    0% {
+      -webkit-transform : scale(0.8);
+         -moz-transform : scale(0.8);
+           -o-transform : scale(0.8);
+              transform : scale(0.8);
+    }
+    20% {
+      -webkit-transform : scale(0.8);
+         -moz-transform : scale(0.8);
+           -o-transform : scale(0.8);
+              transform : scale(0.8);
+    }
+    60% {
+      -webkit-transform : scale(1);
+         -moz-transform : scale(1);
+           -o-transform : scale(1);
+              transform : scale(1);
+    }
+    80% {
+      -webkit-transform : scale(1);
+         -moz-transform : scale(1);
+           -o-transform : scale(1);
+              transform : scale(1);
+    }
+    100% {
+      -webkit-transform : scale(0.8);
+         -moz-transform : scale(0.8);
+           -o-transform : scale(0.8);
+              transform : scale(0.8);
+    }
+  }
+
+.counter-area .logo-wrapper .crypto-logo .crypto-logo-img {
+    position: absolute;
+    left: 17%;
+    top: 20%;
+    width: 15em
+}
+
+.counter-area .counter-content ul.crypto-links {
+    padding-top: 0.8rem;
+}
+
+.counter-area .counter-content ul.crypto-links li {
+    display: inline;
+    padding: 0 0.6rem;
+}
+
+@media (min-width: 1200px) and (max-width: 1499.98px){
+    .counter-area .logo-wrapper {
+        margin-left: -2.5rem !important;
+    }
+}
+
+
+
+
+
