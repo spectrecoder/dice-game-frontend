@@ -161,7 +161,7 @@ const BettingComponent = () => {
           theme: "dark",
         });
       } else if (betColor !== "") {
-        toast.error(`You already bet!`, {
+        toast.error(`You were already bet!`, {
           position: "bottom-left",
           autoClose: 1500,
           hideProgressBar: false,

